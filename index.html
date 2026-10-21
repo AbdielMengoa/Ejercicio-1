@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>El Consejo de la Oruga Azul</title>
+  <link rel="stylesheet" href="estilos-oruga.css">
+</head>
+<body>
+
+  <div class="tarjeta-juego">
+    <header class="encabezado">
+      <span class="insignia">Capítulo V</span>
+      <h2>El Consejo de la Oruga</h2>
+      <p>Ajusta tu estatura antes de probar el hongo mágico.</p>
+    </header>
+
+    <!-- Escena Interactiva -->
+    <div class="escena">
+      <div class="seta-contenedor">
+        <div class="oruga-animada">🐛💨</div>
+        <div class="seta">🍄</div>
+      </div>
+      <div class="alicia-contenedor">
+        <div id="aliciaAvatar" class="alicia-avatar">👧</div>
+      </div>
+    </div>
+
+    <!-- Formulario -->
+    <form id="formOruga" onsubmit="event.preventDefault();">
+      <div class="campo-grupo">
+        <label for="estatura">Tu estatura actual (cm):</label>
+        <div class="input-wrapper">
+          <input type="number" id="estatura" min="1" max="500" placeholder="Ej. 150" required>
+          <span class="unidad">cm</span>
+        </div>
+      </div>
+
+      <div class="campo-grupo">
+        <label for="accionMano">Bocado del Hongo:</label>
+        <select id="accionMano">
+          <option value="izq">Mano Izquierda (Crecer)</option>
+          <option value="der">Mano Derecha (Encoger)</option>
+          <option value="evaluar">Medir ante la Oruga (Exacto 7 cm)</option>
+        </select>
+      </div>
+
+      <button type="button" id="btnOruga">Probar Bocado 🍄</button>
+    </form>
+
+    <div class="consola-resultado" id="resOruga">
+      <span class="humo-icono">💨</span>
+      <p id="textoOruga">"¿Quién eres tú?", susurra la Oruga...</p>
+    </div>
+  </div>
+
+  <script src="codigo-oruga.js"></script>
+</body>
+</html>
